@@ -1,0 +1,35 @@
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(black, pink);
+}
+
+nav ul li {
+    list-style: none;
+    padding-right: 100px;
+    color: white;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.quiz-header {
+    text-shadow: 2px 2px 5px red;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+/* main {
+    width: 100%;
+    height: 500px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+}
+  
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+} */
