@@ -15,6 +15,7 @@ var questionEl = document.querySelector("#question");
 var choicesEl = document.querySelector("#choices");
 var resultEl = document.querySelector("#result");
 var timerEl = document.querySelector("#timer");
+var startButtonEl = document.querySelector("#start-quiz");
 
 var questionIndex = 0;
 var correctCount = 0;
@@ -49,6 +50,7 @@ function renderQuestion() {
 
   choicesEl.innerHTML = "";
   resultEl.innerHTML = "";
+  startButtonEl.innerHTML = "";
 
   var choices = questions[questionIndex].choices;
   var choicesLength = choices.length;
@@ -84,5 +86,7 @@ function checkAnswer(event) {
   setTimeout(nextQuestion, 2000);
 }
 
-renderQuestion();
+
 choicesEl.addEventListener("click", checkAnswer);
+startButtonEl.addEventListener("click", renderQuestion);
+// startButtonEl.addEventListener("click", )
