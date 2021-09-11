@@ -1,20 +1,29 @@
 var resetButton = document.querySelector("#clear-storage");
+var highScoreEl = document.querySelector("#score-container")
 
-function allStorage() {
+// iterate localStorage
+function displayScores() {
+    for (var i = 0; i < localStorage.length; i++) {
 
-    var values = [],
-        keys = Object.keys(localStorage),
-        i = keys.length;
+        // set iteration key name
+        var key = localStorage.key(i);
+    
+        // use key name to retrieve the corresponding value
+        var value = localStorage.getItem(key);
 
-    while ( i-- ) {
-        values.push( localStorage.getItem(keys[i]) );
+        var displayScore = document.createElement("li");
+    
+        // Append values to high score section
+        displayScore.textContent = `${key} - ${value}`;
+        highScoreEl.append(displayScore);
     }
-
-    return console.log(values);
 }
 
 function clearStorage() {
     localStorage.clear();
+    window.location.reload();
 }
 
 resetButton.addEventListener("click", clearStorage)
+
+displayScores();
