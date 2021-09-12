@@ -3,6 +3,8 @@ var highScoreEl = document.querySelector("#score-container")
 
 // iterate localStorage
 function displayScores() {
+    console.log(localStorage);
+    
     for (var i = 0; i < localStorage.length; i++) {
 
         // set iteration key name
