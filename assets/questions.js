@@ -67,7 +67,7 @@ initialButton.setAttribute("id", "save-button")
 var questionIndex = 0;
 var correctCount = 0;
 
-var time = 99;
+var time = 500;
 var intervalId;
 
 function showResults() {
