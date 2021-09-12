@@ -34,6 +34,11 @@ main {
     margin-top: 40px;
 }
 
+#start-quiz:hover, #choices button:hover, #clear-storage:hover {
+    background: chartreuse;
+    cursor: pointer;
+}
+
 #question {
     text-align: center;
 }
@@ -72,6 +77,13 @@ main {
 
 #final-score input, #final-score button {
     margin-bottom: 10px;
+}
+
+#scores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
 }
 
 /* main {

@@ -51,6 +51,12 @@ var questions = [
   },
 ];
 
+var correctSound;
+
+function preload() {
+  correctSound = loadSound("./correct.wav")
+}
+
 var questionEl = document.querySelector("#question");
 var choicesEl = document.querySelector("#choices");
 var resultEl = document.querySelector("#result");
@@ -154,6 +160,7 @@ function checkAnswer(event) {
     if (answer === questions[questionIndex].answer) {
       resultEl.textContent = "Correct";
       correctCount++;
+      snd.play();
     } else {
       resultEl.textContent = "Incorrect";
       time = time - 2;
