@@ -51,11 +51,8 @@ var questions = [
   },
 ];
 
-var correctSound;
-
-function preload() {
-  correctSound = loadSound("./correct.wav")
-}
+var correctAnswer = new Audio("assets/correct.wav");
+var wrongAnswer = new Audio("assets/incorrect.wav");
 
 var questionEl = document.querySelector("#question");
 var choicesEl = document.querySelector("#choices");
@@ -160,11 +157,12 @@ function checkAnswer(event) {
     if (answer === questions[questionIndex].answer) {
       resultEl.textContent = "Correct";
       correctCount++;
-      snd.play();
+      correctAnswer.play();
     } else {
       resultEl.textContent = "Incorrect";
       time = time - 2;
       timerEl.textContent = 'Timer:' + time;
+      wrongAnswer.play();
     }
   }
   setTimeout(nextQuestion, 2000);
