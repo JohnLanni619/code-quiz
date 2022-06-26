@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>High Scores</title>
     <link rel="stylesheet" href='./styles.css'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
 </head>
 <body>
     <header>
@@ -14,22 +15,25 @@
             <a class="quiz-header" href="./index.html">JavaScript Quiz</a>
             <p id="timer">Timer</p>  
         </nav>
+        <div class="overlay"></div>
     </header>
 
     <main>
         <div id="scores">
             <h1>High Scores</h1>
-            <ol id="score-container">
-
-            </ol>
+            <ol id="score-container"></ol>
             <button type="submit" id="clear-storage">Clear High Scores</button>
         </div>
     </main>
 
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+
     <footer>
         <ul class="footer-container">
             <li>
-                <a href="https://github.com/JohnLanni619">GitHub Profile</a>
+                <a href="https://github.com/JohnLanni619"><img src="./assets/GitHub_Logo_White.png" width="100px" /></a>
             </li>
             <li>
                 John Lanni &copy; 2021
@@ -38,5 +42,6 @@
     </footer>
 
     <script src="./scores.js"></script>
+    <script src="./chart.js"></script>
 </body>
 </html>
