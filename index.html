@@ -5,33 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Quiz</title>
-    <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script defer type="module" src="./app.js"></script>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li> 
-                    <a href="./high-score.html">View High Scores</a>
-                </li>
-                <li>
-                    <h1>
-                        <a class="quiz-header" href="./index.html">JavaScript Quiz</a>  
-                    </h1>
-                </li>
-                <li id="timer"></li>
-            </ul>
+            <a href="./high-score.html">View High Scores</a>
+            <a class="quiz-header" href="./index.html">JavaScript Quiz</a>
+            <p id="timer">Timer</p>  
         </nav>
     </header>
-
+    <button type="button" id="start-quiz">Start Quiz</button>
     <main id="quiz-container">
         <div id="question"></div>
 
         <div id="choices"></div>
 
         <div id="result"></div>
-
-        <button type="button" id="start-quiz">Start Quiz</button>
 
         <div id="final-score"></div>
     </main>
@@ -46,6 +37,5 @@
             </li>
         </ul>
     </footer>
-    <script src="./assets/questions.js"></script>
 </body>
 </html>
