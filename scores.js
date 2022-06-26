@@ -2,9 +2,7 @@ var resetButton = document.querySelector("#clear-storage");
 var highScoreEl = document.querySelector("#score-container")
 
 // iterate localStorage
-function displayScores() {
-    console.log(localStorage);
-    
+function displayScores() {    
     for (var i = 0; i < localStorage.length; i++) {
 
         // set iteration key name

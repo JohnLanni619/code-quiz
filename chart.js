@@ -1,31 +1,53 @@
-const labels = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-  ];
+let initials = [];
+let scores = [];
+for (let index = 0; index < localStorage.length; index++) {
+  let initial = localStorage.key(index);
+  initials.push(initial);
 
-  const data = {
-    labels: labels,
-    datasets: [{
-      label: 'My First dataset',
-      backgroundColor: 'rgb(255, 99, 132)',
-      borderColor: 'rgb(255, 99, 132)',
-      data: [0, 10, 5, 2, 20, 30, 45],
-    }]
-  };
+  let score = localStorage.getItem(initial);
+  scores.push(score);
+}
 
-  const config = {
-    type: 'bar',
-    data: data,
-    options: {
-        indexAxis: 'y',
-    }
-  };
+console.log(initials);
+console.log(scores);
 
-  const myChart = new Chart(
-    document.getElementById('myChart'),
-    config
-  );
+const data = {
+  labels: initials,
+  datasets: [{
+    backgroundColor: 'rgb(255, 99, 132)',
+    borderColor: 'rgb(255, 99, 132)',
+    data: scores,
+  }]
+};
+
+const config = {
+  type: 'bar',
+  data: data,
+  options: {
+      indexAxis: 'y',
+      scales: {
+        x: {
+          ticks: {
+            color: "white",
+            size: 24
+          }
+        },
+        y: {
+          ticks: {
+            color: "white",
+            size: 24
+          }
+        },
+      },
+      plugins: {
+        legend: {
+          display: false
+        }
+      }
+  }
+};
+
+const myChart = new Chart(
+  document.getElementById('myChart'),
+  config
+);

@@ -11,9 +11,11 @@
 <body>
     <header>
         <nav>
-            <a href="./high-score.html">View High Scores</a>
             <a class="quiz-header" href="./index.html">JavaScript Quiz</a>
-            <p id="timer">Timer</p>  
+            <div>
+                <a href="./high-score.html">View High Scores</a>
+                <p id="timer">Timer</p>
+            </div>
         </nav>
         <div class="overlay"></div>
     </header>
@@ -21,14 +23,14 @@
     <main>
         <div id="scores">
             <h1>High Scores</h1>
-            <ol id="score-container"></ol>
+            <div class="chart-container">
+                <canvas id="myChart"></canvas>
+            </div>
             <button type="submit" id="clear-storage">Clear High Scores</button>
         </div>
     </main>
 
-    <div>
-        <canvas id="myChart"></canvas>
-    </div>
+    
 
     <footer>
         <ul class="footer-container">

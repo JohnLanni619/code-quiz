@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,16 +9,19 @@
     <link rel="stylesheet" href="./styles.css">
     <script defer type="module" src="./app.js"></script>
 </head>
+
 <body>
     <header>
         <nav>
-            <a href="./high-score.html">View High Scores</a>
             <a class="quiz-header" href="./index.html">JavaScript Quiz</a>
-            <p id="timer">Timer</p>  
+            <div>
+                <a href="./high-score.html">View High Scores</a>
+                <p id="timer">Timer</p>
+            </div>
         </nav>
         <div class="overlay"></div>
     </header>
-    
+
     <button type="button" id="start-quiz">Start Quiz</button>
     <main id="quiz-container">
         <div id="question"></div>
@@ -40,4 +44,5 @@
         </ul>
     </footer>
 </body>
+
 </html>
