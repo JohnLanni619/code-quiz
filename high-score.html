@@ -8,7 +8,7 @@
     <link rel="stylesheet" href='./styles.css'>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
 </head>
-<body>
+<body onload="setChartWidth()">
     <header>
         <nav>
             <a class="quiz-header" href="./index.html">JavaScript Quiz</a>
@@ -23,7 +23,7 @@
     <main>
         <div id="scores">
             <h1>High Scores</h1>
-            <div class="chart-container">
+            <div class="chart-container" id="chart-container">
                 <canvas id="myChart"></canvas>
             </div>
             <button type="submit" id="clear-storage">Clear High Scores</button>
@@ -44,6 +44,5 @@
     </footer>
 
     <script src="./scores.js"></script>
-    <script src="./chart.js"></script>
 </body>
 </html>

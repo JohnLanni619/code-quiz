@@ -141,9 +141,9 @@ button:hover {
     margin: 0;
 }
 
-.chart-container {
+/* .chart-container {
     width: 500px;
-}
+} */
 
 footer {
     margin-top: auto;
@@ -168,9 +168,9 @@ footer ul li {
 }
 
 @media only screen and (max-width: 576px) {
-    .chart-container {
+    /* .chart-container {
         width: 300px;
-    }
+    } */
     #choices > * {
         flex-basis: 65%;
     }
@@ -180,9 +180,9 @@ footer ul li {
     }
   }
 @media only screen and (max-width: 320px) {
-    .chart-container {
+    /* .chart-container {
         width: 200px;
-    }
+    } */
     .quiz-header {
         width: min-content;
         text-align: center;
